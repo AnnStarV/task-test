@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Sans-Serif";
+    src: url("/assets/fonts/Sans-Serif/SansRegular/SansProRegular.eot") format("embedded-opentype"),
+         url("/assets/fonts/Sans-Serif/SansRegular/SansProRegular.woff") format("woff"),
+         url("/assets/fonts/Sans-Serif/SansRegular/SansProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
