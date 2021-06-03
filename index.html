@@ -6,25 +6,83 @@
         <title>Form</title>
         <link rel="shortcut icon" href="/assets/images/record.png" type="image/png">
         <link rel="stylesheet" href="assets/css/main.css">
+        <script type="text/javascript" src="/assets/js/main.js"></script>
     </head>
 
     <body>
         <div class="autorization-form">
+            <div id="answer"></div>
             <div class="container">
-               <form action="" class="form">
-                    <div class="form-header">
-                        <div class="form-header-icon">
-                            <img src="/assets/images/record.png">
-                        </div>
-                        <div class="form-header-title">
-                            <p>Login To Your Account / Register New</p>
+                <div class="form-header">
+                    <div class="form-header-icon">
+                        <img src="/assets/images/record.png">
+                    </div>
+                    <div class="form-header-title">
+                        <p>Login To Your Account / Register New</p>
+                    </div>
+                </div>
+                <div class="forms-container">
+               <form action="login.php" class="form-login" method="POST">
+                    <div class="form-body">
+                        <div class="form-body-login">
+                            <div class="form-body-login-icon">
+                                <img src="/assets/images/toddler.png">
+                            </div>
+                            <div class="form-body-login-login">
+                                <input type="text" name="login-login" placeholder="User Name" required></input>
+                            </div>
+                            <div class="form-body-login-pswd">
+                                <input type="password" name="login-psw" placeholder="Password" required></input>
+                            </div>
+                            <div class="form-body-login-submitBox">
+                                <div class="form-body-login-submitBox-check">
+                                   <input type="checkbox" name="login-check">Remember my password</input>
+                                    <div class="form-body-prompt">
+                                        <div>
+                                            <p>You no longer need to enter</p>
+                                            <p>a password every time you use the site</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-body-login-subm">
+                                    <input type="submit" name="login-subm" value="Login"></input>
+                                </div>
+                            </div>
                         </div>
                     </div>
                </form>
+
+               <div class="forms-line"></div>
+
+               <form action="register.php" class="form-register" method="POST">
+                <div class="form-body">
+                    <div class="form-body-register">
+                        <div class="form-body-register-title">
+                            <p>Register</p>
+                        </div>
+                        <div class="form-body-reg-email">
+                            <label>Email</label>
+                            <input type="email" name="email" onchange="changeData(this.value, this.name)" required ></input>
+                        </div>
+                        <div class="form-body-reg-name">
+                            <label>User Name</label>
+                            <input type="text" name="reg-name" onchange="changeData(this.value, this.name)" required></input>
+                        </div>
+                        <div class="form-body-reg-pswd">
+                            <label>Password</label>
+                            <input type="password" name="reg-pswd" onchange="changeData(this.value, this.name)" required></input>
+                        </div>
+                        <div class="form-body-reg-submitBox">
+                            <div class="form-body-reg-subm">
+                                <input type="submit" name="reg-subm" value="Register"></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </form>
+                </div>
             </div>
         </div>
+        
     </body>
 </html>
-<script>
-    console.log(window.innerHeight);
-    </script>
